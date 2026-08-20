@@ -10,12 +10,13 @@ type Props = {
   title: string;
   description: string;
   canonicalPath: string;
-  alternatePath: string;
+  alternatePath?: string;
+  robots?: string;
 };
 
-const { locale, title, description, canonicalPath, alternatePath } = Astro.props;
+const { locale, title, description, canonicalPath, alternatePath, robots } = Astro.props;
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
-const alternateUrl = new URL(alternatePath, siteUrl).toString();
+const alternateUrl = alternatePath ? new URL(alternatePath, siteUrl).toString() : undefined;
 const oppositeLocale: Locale = locale === "nl" ? "en" : "nl";
 const skipLabel = locale === "nl" ? "Naar inhoud" : "Skip to content";
 ---
@@ -27,10 +28,17 @@ const skipLabel = locale === "nl" ? "Naar inhoud" : "Skip to content";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang={locale} href={canonicalUrl} />
-    <link rel="alternate" hreflang={oppositeLocale} href={alternateUrl} />
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+    {
+      alternateUrl && (
+        <>
+          <link rel="alternate" hreflang={locale} href={canonicalUrl} />
+          <link rel="alternate" hreflang={oppositeLocale} href={alternateUrl} />
+          <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+        </>
+      )
+    }
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="B.essential" />
@@ -38,10 +46,14 @@ const skipLabel = locale === "nl" ? "Naar inhoud" : "Skip to content";
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content={locale === "nl" ? "nl_NL" : "en_GB"} />
-    <meta
-      property="og:locale:alternate"
-      content={locale === "nl" ? "en_GB" : "nl_NL"}
-    />
+    {
+      alternateUrl && (
+        <meta
+          property="og:locale:alternate"
+          content={locale === "nl" ? "en_GB" : "nl_NL"}
+        />
+      )
+    }
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
