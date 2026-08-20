@@ -207,7 +207,10 @@ const labels =
 
 <footer class="site-footer">
   <div class="site-shell footer-grid">
-    <Wordmark href={homeHref} ariaLabel={labels.home} />
+    <div class="footer-brand">
+      <Wordmark href={homeHref} ariaLabel={labels.home} />
+      <p>KVK 95428054</p>
+    </div>
     <p>{year}</p>
     <div class="language-switcher" aria-label={labels.language}>
       <a
