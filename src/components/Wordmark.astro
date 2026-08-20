@@ -1,0 +1,12 @@
+---
+type Props = {
+  href?: string;
+  ariaLabel?: string;
+};
+
+const { href = "/", ariaLabel = "B.essential" } = Astro.props;
+---
+
+<a class="wordmark" href={href} aria-label={ariaLabel}>
+  <span>B</span><span class="wordmark__dot">.</span><span>essential</span>
+</a>
