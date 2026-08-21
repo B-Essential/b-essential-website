@@ -220,7 +220,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "nooom",
           subtitle: "Creatieve productie en commerciële ontwikkeling",
           body:
-            "nooom is een creatieve productiestudio. Mijn rol richt zich naast de creatieve praktijk op positionering, proposities, commerciële ontwikkeling, nieuwe marktsegmenten en het verbeteren van outreach en salesprocessen."
+            "nooom is een creatieve productiestudio. Mijn rol richt zich naast de creatieve praktijk op positionering, proposities, commerciële ontwikkeling, nieuwe marktsegmenten en het verbeteren van outreach en salesprocessen.",
+          link: {
+            label: "nooom.nl ↗",
+            href: "https://www.nooom.nl",
+            ariaLabel: "Bezoek nooom.nl"
+          }
         }
       ]
     },
@@ -371,7 +376,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "nooom",
           subtitle: "Creative production and commercial development",
           body:
-            "nooom is a creative production studio. Alongside the creative practice, my role focuses on positioning, propositions, commercial development, new market segments and improving outreach and sales processes."
+            "nooom is a creative production studio. Alongside the creative practice, my role focuses on positioning, propositions, commercial development, new market segments and improving outreach and sales processes.",
+          link: {
+            label: "nooom.nl ↗",
+            href: "https://www.nooom.nl",
+            ariaLabel: "Visit nooom.nl"
+          }
         }
       ]
     },
