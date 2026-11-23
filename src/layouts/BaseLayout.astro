@@ -9,13 +9,14 @@ type Props = {
   canonicalPath: string;
   alternatePath?: string;
   robots?: string;
+  skipLabel?: string;
 };
 
 const { locale, title, description, canonicalPath, alternatePath, robots } = Astro.props;
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
 const alternateUrl = alternatePath ? new URL(alternatePath, siteUrl).toString() : undefined;
 const oppositeLocale: Locale = locale === "nl" ? "en" : "nl";
-const skipLabel = locale === "nl" ? "Naar inhoud" : "Skip to content";
+const skipLabel = Astro.props.skipLabel ?? (locale === "nl" ? "Direct naar inhoud" : "Skip to content");
 ---
 
 <!doctype html>

@@ -10,13 +10,18 @@ npm run build
 npm run preview
 ```
 
-The approved English homepage lives at `/`. The existing `/en/` address
-renders the same homepage with `/` as its canonical URL. Shared metadata stays
-in `src/layouts/BaseLayout.astro`; homepage copy is in `src/content/site.ts`.
+English lives at `/` and `/en/`, with `/` as the canonical URL. Dutch lives at
+`/nl/`. The EN/NL switch keeps the current section. Per-language titles,
+descriptions, canonical URLs and hreflang links use `src/layouts/BaseLayout.astro`.
+The sitemap contains both canonical language URLs from the approved V7 package.
+
+Approved copy, headings, case descriptions and accessibility labels are in
+`src/content/homepages.json`; `src/content/site.ts` exposes the typed locales.
+Both languages share the existing homepage and carousel components.
 
 ## Case photographs
 
-Original web assets from the approved V6 ZIP, without re-encoding:
+Original web assets from the approved V7 ZIP, without re-encoding:
 
 - Studio Zelden: `public/images/cases/studio-zelden/`
 - VOYAH: `public/images/cases/voyah/`
@@ -24,9 +29,9 @@ Original web assets from the approved V6 ZIP, without re-encoding:
 
 To replace or add photographs, put the files in the corresponding case folder
 and edit that case's array in **`src/content/galleries.json`**. This is the supplied
-manifest, with 17 Studio Zelden photographs and 8 VOYAH photographs. Each entry
+manifest, with 16 Studio Zelden photographs and 8 VOYAH photographs. Each entry
 has `src`, `alt`, `width`, `height` and `fit` (`contain` or `cover`), with an optional
-`objectPosition`. Paths retain the ZIP format, `assets/<case>/<filename>`;
+`objectPosition`. Use `alt` for English and `altNl` for Dutch. Paths retain the ZIP format, `assets/<case>/<filename>`;
 `src/content/cases.ts` maps them to `/images/cases/<case>/<filename>` on this site.
 Array order determines slide order. Keep each original `logo.png` separate from
 the photographs. Image dimensions describe the original file; `contain` keeps

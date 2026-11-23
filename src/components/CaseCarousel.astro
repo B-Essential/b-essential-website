@@ -11,8 +11,8 @@ const trackId = `${caseStudy.id}-photos`;
 
 <section
   class:list={["case-gallery", `${caseStudy.id}-gallery`]}
-  aria-label={`${caseStudy.name} project images`}
-  aria-roledescription="carousel"
+  aria-label={caseStudy.carousel.label}
+  aria-roledescription={caseStudy.carousel.roleDescription}
   data-carousel
 >
   <div class="gallery-stage">
@@ -20,7 +20,7 @@ const trackId = `${caseStudy.id}-photos`;
       class="carousel-track"
       id={trackId}
       tabindex="0"
-      aria-label={`${caseStudy.name} photographs`}
+      aria-label={caseStudy.carousel.photos}
     >
       {
         caseStudy.images.map((image, index) => (
@@ -41,19 +41,19 @@ const trackId = `${caseStudy.id}-photos`;
       <button
         type="button"
         class="carousel-arrow previous"
-        aria-label={`Previous ${caseStudy.name} photo`}
+        aria-label={caseStudy.carousel.previous}
         aria-controls={trackId}
       />
       <button
         type="button"
         class="carousel-arrow next"
-        aria-label={`Next ${caseStudy.name} photo`}
+        aria-label={caseStudy.carousel.next}
         aria-controls={trackId}
       />
       <div
         class="carousel-dots"
         role="group"
-        aria-label={`Choose a ${caseStudy.name} photo`}
+        aria-label={caseStudy.carousel.choose}
       />
     </div>
   </div>
@@ -76,12 +76,14 @@ const trackId = `${caseStudy.id}-photos`;
     const photos = Array.from(track.querySelectorAll<HTMLImageElement>("img"));
     if (photos.length < 2) continue;
 
+    const dutch = document.documentElement.lang === "nl";
+    const ofWord = dutch ? "van" : "of";
     let current = 0;
     const dots = photos.map((_, index) => {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "carousel-dot";
-      dot.setAttribute("aria-label", `Show photo ${index + 1} of ${photos.length}`);
+      dot.setAttribute("aria-label", `${dutch ? "Toon foto" : "Show photo"} ${index + 1} ${ofWord} ${photos.length}`);
       dot.setAttribute("aria-controls", track.id);
       dot.addEventListener("click", () => show(index));
       navigation.append(dot);
@@ -106,7 +108,7 @@ const trackId = `${caseStudy.id}-photos`;
       }
 
       if (announce) {
-        status!.textContent = `Photo ${index + 1} of ${photos.length}. ${photos[index].alt}`;
+        status!.textContent = `${dutch ? "Foto" : "Photo"} ${index + 1} ${ofWord} ${photos.length}. ${photos[index].alt}`;
       }
     }
 

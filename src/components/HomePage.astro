@@ -1,7 +1,7 @@
 ---
 import Wordmark from "./Wordmark.astro";
 import CaseCarousel from "./CaseCarousel.astro";
-import { caseStudies } from "../content/cases";
+import { getCaseStudies } from "../content/cases";
 import type { SiteContent } from "../content/site";
 
 type Props = {
@@ -9,17 +9,24 @@ type Props = {
 };
 
 const { page } = Astro.props;
+const caseStudies = getCaseStudies(page.locale);
 ---
 
-<header aria-label="Site header">
-  <Wordmark href="#top" ariaLabel="B.essential home" />
-  <nav aria-label="Primary navigation">
+<header aria-label={page.labels.header}>
+  <Wordmark href="#top" ariaLabel={page.labels.home} />
+  <nav aria-label={page.labels.primaryNav}>
     {page.nav.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>
-  <span class="navnote">{page.navNote}</span>
+  <div class="header-tools">
+    <span class="navnote">{page.navNote}</span>
+    <div role="group" class="languages" aria-label={page.labels.language}>
+      <a href="/" hreflang="en" lang="en" aria-label="English" aria-current={page.locale === "en" ? "page" : undefined}>EN</a>
+      <a href="/nl/" hreflang="nl" lang="nl" aria-label="Nederlands" aria-current={page.locale === "nl" ? "page" : undefined}>NL</a>
+    </div>
+  </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
   <section class="hero" id="top" aria-labelledby="hero-heading">
     <div class="hero-number" aria-hidden="true">B.</div>
     <div class="hero-top">
@@ -31,7 +38,7 @@ const { page } = Astro.props;
     </div>
     <div class="hero-grid">
       <div>
-        <h1 id="hero-heading">Brand strategy.<br /><em>Creative</em> leadership.<br />Commercial purpose.</h1>
+        <h1 id="hero-heading" set:html={page.hero.heading} />
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-light">{page.hero.primaryCta}</a>
           <a href="#work" class="btn btn-outline">{page.hero.secondaryCta}</a>
@@ -48,7 +55,7 @@ const { page } = Astro.props;
   <section class="expertise section-pad" id="expertise" aria-labelledby="expertise-heading">
     <span class="section-index">{page.expertise.label}</span>
     <div class="section-lede">
-      <h2 id="expertise-heading">Clear thinking.<br />Well-directed work.</h2>
+      <h2 id="expertise-heading" set:html={page.expertise.heading} />
       <p>{page.expertise.intro}</p>
     </div>
     <div class="capabilities">
@@ -65,7 +72,7 @@ const { page } = Astro.props;
   <section class="work section-pad" id="work" aria-labelledby="work-heading">
     <span class="section-index">{page.work.label}</span>
     <div class="work-header">
-      <h2 id="work-heading">Experience at<br />every level.</h2>
+      <h2 id="work-heading" set:html={page.work.heading} />
       <p>{page.work.intro}</p>
     </div>
     <div class="case-grid">
@@ -85,7 +92,7 @@ const { page } = Astro.props;
   <section class="ways section-pad" id="working" aria-labelledby="ways-heading">
     <span class="section-index">{page.ways.label}</span>
     <div class="ways-top">
-      <h2 id="ways-heading">Different roles.<br />One shared ambition.</h2>
+      <h2 id="ways-heading" set:html={page.ways.heading} />
       <p>{page.ways.intro}</p>
     </div>
     <div class="engagements">
@@ -102,7 +109,7 @@ const { page } = Astro.props;
   <section class="ventures section-pad" id="ventures" aria-labelledby="ventures-heading">
     <span class="section-index">{page.ventures.label}</span>
     <div class="venture-intro">
-      <h2 id="ventures-heading">I build ideas<br /><em>into working things.</em></h2>
+      <h2 id="ventures-heading" set:html={page.ventures.heading} />
       <p>{page.ventures.intro}</p>
     </div>
     <div class="venture-grid">
@@ -118,8 +125,8 @@ const { page } = Astro.props;
             href={venture.href}
             target="_blank"
             rel="noopener"
-            aria-label={`Explore ${venture.title}`}
-          >Explore ↗</a>
+            aria-label={venture.ariaLabel}
+          >{venture.linkLabel}</a>
         </div>
       ))}
     </div>
@@ -131,20 +138,31 @@ const { page } = Astro.props;
     </figure>
     <div class="about-copy">
       <span class="section-index">{page.about.label}</span>
-      <h2 id="about-heading">Close to the craft.<br />At the heart of decisions.</h2>
+      <h2 id="about-heading" set:html={page.about.heading} />
       {page.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
     </div>
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-heading">
     <span class="section-index">{page.contact.label}</span>
-    <h2 id="contact-heading">Something worth<br />working on?</h2>
+    <h2 id="contact-heading" set:html={page.contact.heading} />
     <p>{page.contact.body}</p>
     <a href={page.contact.href} class="btn btn-dark">{page.contact.cta}</a>
   </section>
 </main>
 
 <footer>
-  <Wordmark href="#top" ariaLabel="B.essential home" />
+  <Wordmark href="#top" ariaLabel={page.labels.home} />
   <span>{page.footer}</span>
 </footer>
+
+<script>
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(".languages a")) {
+    const path = link.getAttribute("href");
+    if (!path) continue;
+    // Keep the visitor at the same section when switching language.
+    const updateHref = () => link.setAttribute("href", path + window.location.hash);
+    updateHref();
+    window.addEventListener("hashchange", updateHref);
+  }
+</script>

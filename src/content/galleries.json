@@ -6,119 +6,128 @@
       "width": 1600,
       "height": 1107,
       "fit": "cover",
-      "objectPosition": "50% 38%"
+      "objectPosition": "50% 38%",
+      "altNl": "De vier leden van het managementteam van Studio Zelden in de daglichtstudio."
     },
     {
       "src": "assets/studio-zelden/02-daylight-studio.webp",
       "alt": "Studio Zelden’s open daylight studio with tall windows and a photography workstation.",
       "width": 1600,
       "height": 1067,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "De open daglichtstudio van Studio Zelden met hoge ramen en een werkplek voor fotografie."
     },
     {
       "src": "assets/studio-zelden/03-studio-workspace.webp",
       "alt": "The studio kitchen, styling area and workstations at Studio Zelden.",
       "width": 1600,
       "height": 990,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "De keuken, stylingruimte en werkplekken van Studio Zelden."
     },
     {
       "src": "assets/studio-zelden/04-crew-on-set.webp",
       "alt": "Studio Zelden’s production team filming on set.",
       "width": 1000,
       "height": 667,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Het productieteam van Studio Zelden tijdens filmopnames op de set."
     },
     {
       "src": "assets/studio-zelden/05-adidas-running.webp",
       "alt": "adidas running campaign in the woods, with the original phone composition on the left.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Een hardloper in het bos voor adidas, met links de campagne op een telefoonscherm."
     },
     {
       "src": "assets/studio-zelden/06-adidas-amsterdam-metro.webp",
       "alt": "An adidas ZX 2K Boost campaign displayed along a platform at Weesperplein in Amsterdam.",
       "width": 1600,
       "height": 901,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Posters voor de adidas ZX 2K Boost langs het perron van metrostation Weesperplein in Amsterdam."
     },
     {
       "src": "assets/studio-zelden/07-magnum.webp",
       "alt": "Magnum ice cream campaign with friends outdoors at night and the gold Magnum logo in the lower right corner.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Vrienden eten ’s avonds buiten een ijsje, met rechtsonder het gouden logo van Magnum."
     },
     {
       "src": "assets/studio-zelden/08-london-bus.webp",
       "alt": "A double-decker bus carrying the Fever-Tree campaign in central London.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Een dubbeldekker met reclame voor Fever-Tree in het centrum van Londen."
     },
     {
       "src": "assets/studio-zelden/09-fever-tree-pairing-wheel.webp",
       "alt": "Fever-Tree Mediterranean Tonic pairing wheel and the “Discover the perfect tonic for your gin” campaign.",
       "width": 1600,
       "height": 914,
-      "fit": "cover"
-    },
-    {
-      "src": "assets/studio-zelden/10-fever-tree-studio.webp",
-      "alt": "Glass with grapefruit and a bottle of Fever-Tree Mediterranean Tonic Water.",
-      "width": 1200,
-      "height": 675,
-      "fit": "contain"
+      "fit": "cover",
+      "altNl": "Een smaakwijzer voor gin en tonic naast de slogan ‘Discover the perfect tonic for your gin’ van Fever-Tree Mediterranean Tonic."
     },
     {
       "src": "assets/studio-zelden/11-maille-veganuary.webp",
       "alt": "Maille Veganuary campaign showing the plated dish, mustard and phone artwork together.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Een gerecht met mosterd in de Veganuary-campagne van Maille, met links de uiting op een telefoonscherm."
     },
     {
       "src": "assets/studio-zelden/12-bmw-x1.webp",
       "alt": "BMW X1 campaign still with the headlights and grille lit in blue and violet.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "De koplampen en grille van een BMW X1 in blauw en violet licht."
     },
     {
       "src": "assets/studio-zelden/13-smirnoff-ice.webp",
       "alt": "Smirnoff Ice campaign with friends and a bottle held towards the camera.",
       "width": 1200,
       "height": 675,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Vrienden houden een fles Smirnoff Ice naar de camera."
     },
     {
       "src": "assets/studio-zelden/14-puik.webp",
       "alt": "PUIK furniture photographed in a sunlit interior.",
       "width": 1600,
       "height": 1066,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Meubels van PUIK in een zonnig interieur."
     },
     {
       "src": "assets/studio-zelden/15-hoya.webp",
       "alt": "Studio Zelden’s still life for HOYA, with spectacle frames and optical instruments.",
       "width": 1600,
       "height": 1066,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Stilleven van Studio Zelden voor HOYA met brilmonturen en optische instrumenten."
     },
     {
       "src": "assets/studio-zelden/16-lekker-bikes.webp",
       "alt": "A cyclist photographed from a low angle for LEKKER Bikes.",
       "width": 1000,
       "height": 667,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Een fietser van onderaf gefotografeerd voor LEKKER Bikes."
     },
     {
       "src": "assets/studio-zelden/17-adidas-running-shoe.webp",
       "alt": "Close-up of an athlete’s white running shoe in motion.",
       "width": 1600,
       "height": 1280,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Close-up van de witte hardloopschoen van een atleet in beweging."
     }
   ],
   "voyah": [
@@ -127,56 +136,64 @@
       "alt": "A blue VOYAH in motion through the forest.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "Een blauwe VOYAH rijdt tussen de bomen door."
     },
     {
       "src": "assets/voyah/02-courage-social.webp",
       "alt": "VOYAH Courage campaign showing the phone and nighttime car image together.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "De campagne voor de VOYAH Courage op een telefoonscherm naast een nachtbeeld van de auto."
     },
     {
       "src": "assets/voyah/03-front-detail.webp",
       "alt": "The front of a blue VOYAH FREE with its grille and bonnet lit from above.",
       "width": 1600,
       "height": 900,
-      "fit": "contain"
+      "fit": "contain",
+      "altNl": "De voorkant van een blauwe VOYAH FREE met licht van boven op de grille en de motorkap."
     },
     {
       "src": "assets/voyah/04-forest-road.webp",
       "alt": "A VOYAH driving towards the camera on a sunlit forest road.",
       "width": 1600,
       "height": 1067,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Een VOYAH rijdt op een zonnige bosweg de camera tegemoet."
     },
     {
       "src": "assets/voyah/05-alpine-charging.webp",
       "alt": "VOYAH at a charging station in the mountains.",
       "width": 1600,
       "height": 1034,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Een VOYAH bij een laadpaal in de bergen."
     },
     {
       "src": "assets/voyah/06-rear-cabin.webp",
       "alt": "The rear passenger cabin of a VOYAH with light upholstery.",
       "width": 1600,
       "height": 1066,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "De achterbank van een VOYAH met lichte bekleding."
     },
     {
       "src": "assets/voyah/07-snow.webp",
       "alt": "A blue VOYAH driving through snow against a mountain backdrop.",
       "width": 1600,
       "height": 1066,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Een blauwe VOYAH rijdt door de sneeuw met bergen op de achtergrond."
     },
     {
       "src": "assets/voyah/08-architecture.webp",
       "alt": "A blue VOYAH parked in a modern courtyard.",
       "width": 1600,
       "height": 1066,
-      "fit": "cover"
+      "fit": "cover",
+      "altNl": "Een blauwe VOYAH staat geparkeerd op een moderne binnenplaats."
     }
   ]
 }

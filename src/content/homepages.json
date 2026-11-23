@@ -1,0 +1,348 @@
+{
+  "en": {
+    "path": "/",
+    "title": "Bastiaan van Ederen | Creative Strategy Director | B.essential",
+    "description": "Bastiaan van Ederen is a Creative Strategy Director working across brand, marketing and creative leadership. Open to full-time roles, interim work and independent briefs.",
+    "labels": {
+      "skip": "Skip to content",
+      "header": "Site header",
+      "home": "B.essential home",
+      "primaryNav": "Primary navigation",
+      "language": "Choose language"
+    },
+    "nav": [
+      {
+        "label": "Expertise",
+        "href": "#expertise"
+      },
+      {
+        "label": "Experience",
+        "href": "#work"
+      },
+      {
+        "label": "Ventures",
+        "href": "#ventures"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "navNote": "Independent practice · Netherlands",
+    "hero": {
+      "eyebrow": "The independent practice of",
+      "name": "Bastiaan van Ederen",
+      "role": "Creative Strategy Director",
+      "heading": "Brand strategy.<br><em>Creative</em> leadership.<br>Commercial purpose.",
+      "description": "I connect business ambitions with brand and marketing strategy, bringing together the people, ideas and expertise to make them real.",
+      "primaryCta": "Work together",
+      "secondaryCta": "Explore experience",
+      "discipline": "Strategy / Marketing / Creative Direction",
+      "availability": "Full-time roles & independent engagements"
+    },
+    "expertise": {
+      "label": "01 / Expertise",
+      "heading": "Clear thinking.<br>Well-directed work.",
+      "intro": "From defining a brand’s direction to leading the teams that deliver it. Strategy, creative judgement and commercial responsibility belong in the same conversation.",
+      "items": [
+        {
+          "label": "01 / Define",
+          "title": "Brand & marketing strategy",
+          "body": "Positioning, identity, go-to-market planning, audience insights and integrated marketing and media strategy."
+        },
+        {
+          "label": "02 / Lead",
+          "title": "Creative strategy & direction",
+          "body": "Translating business objectives into ideas, briefs, multidisciplinary collaboration and purposeful brand experiences."
+        },
+        {
+          "label": "03 / Deliver",
+          "title": "Leadership & implementation",
+          "body": "Creative teams, production oversight, media investment, stakeholder alignment and evaluation, from concept through execution."
+        }
+      ]
+    },
+    "work": {
+      "label": "02 / Selected experience",
+      "heading": "Experience at<br>every level.",
+      "intro": "My practice is shaped by building a creative business and leading complex brand and marketing work, with responsibility for people, investment and the quality of what reaches the audience.",
+      "cases": [
+        {
+          "role": "Founder & Creative Strategy Director",
+          "title": "Built from the ground up",
+          "body": "I founded Studio Zelden and grew it into a creative agency of 15 with 1,400 m² of studio space. I led the business and shaped campaigns for clients including Philips, Fever-Tree and Unilever.",
+          "carousel": {
+            "label": "Studio Zelden project images",
+            "photos": "Studio Zelden photographs",
+            "previous": "Previous Studio Zelden photo",
+            "next": "Next Studio Zelden photo",
+            "choose": "Choose a Studio Zelden photo",
+            "roleDescription": "carousel"
+          }
+        },
+        {
+          "role": "Creative Strategy Director for nooom agency",
+          "title": "Launching VOYAH in the Benelux",
+          "body": "I led the launch of premium electric vehicle brand VOYAH in the Netherlands and Belgium. I directed a team of four, managed the marketing budget and worked with retail partners to bring the campaigns to local audiences.",
+          "carousel": {
+            "label": "VOYAH project images",
+            "photos": "VOYAH photographs",
+            "previous": "Previous VOYAH photo",
+            "next": "Next VOYAH photo",
+            "choose": "Choose a VOYAH photo",
+            "roleDescription": "carousel"
+          }
+        }
+      ]
+    },
+    "ways": {
+      "label": "03 / Ways of working",
+      "heading": "Different roles.<br>One shared ambition.",
+      "intro": "I can join your leadership team, guide a launch or help you work through a single decision.",
+      "items": [
+        {
+          "title": "Full-time employment",
+          "body": "I’m open to a permanent, in-house role leading brand, marketing or creative strategy and developing the team over time."
+        },
+        {
+          "title": "Interim",
+          "body": "I step into a leadership role to guide a team through a transition, a launch or a change in direction."
+        },
+        {
+          "title": "Contract-based",
+          "body": "I join your team on a contract basis with agreed responsibilities, for a set period or a regular number of days."
+        },
+        {
+          "title": "Project-based",
+          "body": "I direct a defined piece of work, from brand positioning to a campaign or market launch."
+        },
+        {
+          "title": "Advisory & ad hoc",
+          "body": "I offer a second perspective on a brief, a creative proposal or a decision about where to invest."
+        }
+      ]
+    },
+    "ventures": {
+      "label": "04 / Independent ventures",
+      "heading": "I build ideas<br><em>into working things.</em>",
+      "intro": "Alongside work for clients, I develop independent concepts and digital services. These ventures show how strategic thinking can become a focused, usable product, beyond a campaign or presentation.",
+      "items": [
+        {
+          "title": "Wider Practice",
+          "subtitle": "Artist Opportunity Assistant",
+          "body": "A platform that researches and matches grants, residencies and open calls with artists’ individual practices, helping them spend less time searching and more time making work.",
+          "href": "https://artists.widerpractice.com/en",
+          "linkLabel": "Explore ↗",
+          "ariaLabel": "Explore Wider Practice"
+        },
+        {
+          "title": "Regelsein",
+          "subtitle": "Building regulation change monitor",
+          "body": "A Dutch monitoring service for changes in building regulations, designed to help architecture and building-advisory professionals stay informed on relevant developments.",
+          "href": "https://regelsein.nl",
+          "linkLabel": "Explore ↗",
+          "ariaLabel": "Explore Regelsein"
+        }
+      ]
+    },
+    "about": {
+      "label": "05 / About",
+      "heading": "Close to the craft.<br>At the heart of decisions.",
+      "portrait": {
+        "src": "/images/about/bastiaan-van-ederen.webp",
+        "alt": "Bastiaan van Ederen",
+        "width": 1134,
+        "height": 1700
+      },
+      "paragraphs": [
+        "I built my career through photography, communication design and production before founding and leading Studio Zelden. That experience shaped how I work today, combining creative judgement with entrepreneurial responsibility and a clear view of the bigger picture.",
+        "I am approachable, direct and decisive. I work closely with management teams to turn business ambitions into brand and marketing strategies, while staying connected to the teams and people behind the execution."
+      ]
+    },
+    "contact": {
+      "label": "06 / Contact",
+      "heading": "Something worth<br>working on?",
+      "body": "If you’re hiring for a full-time role or have an independent brief in mind, I’d be glad to hear from you.",
+      "cta": "Start a conversation",
+      "href": "mailto:bastiaanvanederen@gmail.com?subject=B.essential%20%E2%80%94%20Introduction"
+    },
+    "footer": "Creative strategy & independent ventures"
+  },
+  "nl": {
+    "path": "/nl/",
+    "title": "Bastiaan van Ederen | Merkstrategie en creatief leiderschap | B.essential",
+    "description": "Bastiaan van Ederen geeft richting aan merken, marketing en creatieve teams. Beschikbaar voor een vaste fulltimefunctie, interimwerk en zelfstandige opdrachten.",
+    "labels": {
+      "skip": "Direct naar inhoud",
+      "header": "Paginaheader",
+      "home": "Startpagina B.essential",
+      "primaryNav": "Hoofdnavigatie",
+      "language": "Taal kiezen"
+    },
+    "nav": [
+      {
+        "label": "Expertise",
+        "href": "#expertise"
+      },
+      {
+        "label": "Ervaring",
+        "href": "#work"
+      },
+      {
+        "label": "Eigen initiatieven",
+        "href": "#ventures"
+      },
+      {
+        "label": "Over mij",
+        "href": "#about"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "navNote": "Zelfstandig gevestigd in Nederland",
+    "hero": {
+      "eyebrow": "Strategie en creatieve regie door",
+      "name": "Bastiaan van Ederen",
+      "role": "Directeur creatieve strategie",
+      "heading": "Merkstrategie.<br><em>Creatief</em> leiderschap.<br>Commerciële ambitie.",
+      "description": "Ik help organisaties hun ambities te vertalen naar merk- en marketingstrategie. Daarvoor breng ik de juiste mensen bij elkaar, van de eerste keuzes tot de uitvoering.",
+      "primaryCta": "Samenwerken",
+      "secondaryCta": "Bekijk mijn werk",
+      "discipline": "Strategie / Marketing / Creatieve regie",
+      "availability": "Fulltimefuncties en zelfstandige opdrachten"
+    },
+    "expertise": {
+      "label": "01 / Expertise",
+      "heading": "Een heldere koers.<br>Richting voor het team.",
+      "intro": "Ik help merken hun koers te bepalen en geef leiding aan de teams die het werk maken. Bij elke creatieve keuze weeg ik mee wat het merk wil bereiken en wat de investering moet opleveren.",
+      "items": [
+        {
+          "label": "01 / Koers bepalen",
+          "title": "Merk- en marketingstrategie",
+          "body": "Ik onderzoek wat de doelgroep beweegt, bepaal de positionering en merkidentiteit en maak een plan voor de marktintroductie, marketing en media."
+        },
+        {
+          "label": "02 / Richting geven",
+          "title": "Creatieve strategie en regie",
+          "body": "Ik vertaal bedrijfsdoelen naar creatieve ideeën en heldere briefings. Ik breng de disciplines bij elkaar die bepalen hoe mensen het merk ervaren."
+        },
+        {
+          "label": "03 / Uitvoeren",
+          "title": "Leiding en uitvoering",
+          "body": "Ik stuur creatieve teams en producties aan, beheer mediabudgetten en stem keuzes af met de betrokkenen. Na de uitvoering kijk ik wat het werk heeft opgeleverd."
+        }
+      ]
+    },
+    "work": {
+      "label": "02 / Geselecteerd werk",
+      "heading": "Een bureau bouwen.<br>Een merk lanceren.",
+      "intro": "Als ondernemer en als strateeg geef ik richting aan merken en teams. In beide rollen draag ik verantwoordelijkheid voor de mensen, het budget en de kwaliteit van het werk dat het publiek te zien krijgt.",
+      "cases": [
+        {
+          "role": "Oprichter en directeur creatieve strategie",
+          "title": "Van eenmanszaak naar een team van 15",
+          "body": "Ik bouwde Studio Zelden uit van een eenmanszaak tot een creatief bureau met 15 mensen en 1.400 m² studioruimte. Ik leidde het bureau en gaf richting aan campagnes voor onder meer Philips, Fever-Tree en Unilever.",
+          "carousel": {
+            "label": "Projecten van Studio Zelden in beeld",
+            "photos": "Foto’s van Studio Zelden",
+            "previous": "Vorige foto van Studio Zelden",
+            "next": "Volgende foto van Studio Zelden",
+            "choose": "Kies een foto van Studio Zelden",
+            "roleDescription": "carrousel"
+          }
+        },
+        {
+          "role": "Directeur creatieve strategie namens nooom agency",
+          "title": "De introductie van VOYAH in de Benelux",
+          "body": "Voor de introductie van het elektrische automerk VOYAH in Nederland en België gaf ik leiding aan een team van vier. Ik beheerde het marketingbudget en werkte met de directies van onze retailpartners aan de lokale campagnes.",
+          "carousel": {
+            "label": "Projecten voor VOYAH in beeld",
+            "photos": "Foto’s van VOYAH",
+            "previous": "Vorige foto van VOYAH",
+            "next": "Volgende foto van VOYAH",
+            "choose": "Kies een foto van VOYAH",
+            "roleDescription": "carrousel"
+          }
+        }
+      ]
+    },
+    "ways": {
+      "label": "03 / Samenwerken",
+      "heading": "Als vaste collega<br>of voor een opdracht.",
+      "intro": "Ik kan je managementteam versterken, een lancering leiden of met je meedenken over een concrete beslissing.",
+      "items": [
+        {
+          "title": "Vaste fulltimefunctie",
+          "body": "Ik sta open voor een vaste rol binnen je organisatie. Daarin wil ik richting geven aan merk, marketing of creatieve strategie en het team verder ontwikkelen."
+        },
+        {
+          "title": "Interim",
+          "body": "Ik neem tijdelijk de leiding en begeleid je team bij een overgang, een lancering of een nieuwe koers."
+        },
+        {
+          "title": "Op contractbasis",
+          "body": "Ik versterk je team voor een afgesproken periode of op vaste dagen. Vooraf spreken we af waar ik verantwoordelijk voor ben."
+        },
+        {
+          "title": "Op projectbasis",
+          "body": "Ik leid een afgebakend project, van een nieuwe merkpositionering tot een campagne of marktintroductie."
+        },
+        {
+          "title": "Advies op afroep",
+          "body": "Ik kijk met je mee naar een briefing, een creatief voorstel of de vraag waar je het beste in kunt investeren."
+        }
+      ]
+    },
+    "ventures": {
+      "label": "04 / Eigen initiatieven",
+      "heading": "Van eigen idee<br><em>naar digitale dienst.</em>",
+      "intro": "Naast mijn werk voor opdrachtgevers ontwikkel ik eigen concepten en digitale diensten. Met Wider Practice en Regelsein gebruik ik diezelfde strategische aanpak om mensen te helpen bij een concrete vraag in hun vak.",
+      "items": [
+        {
+          "title": "Wider Practice",
+          "subtitle": "Kansen voor kunstenaars",
+          "body": "Wider Practice zoekt subsidies, residenties en open calls die passen bij het werk van een kunstenaar. Zo blijft er meer tijd over om nieuw werk te maken.",
+          "href": "https://artists.widerpractice.com/nl",
+          "linkLabel": "Bekijk ↗",
+          "ariaLabel": "Bekijk Wider Practice"
+        },
+        {
+          "title": "Regelsein",
+          "subtitle": "Monitor voor bouwregelgeving",
+          "body": "Regelsein volgt wijzigingen in de Nederlandse bouwregelgeving. Zo zien architecten en bouwadviseurs welke ontwikkelingen voor hun werk relevant zijn.",
+          "href": "https://regelsein.nl",
+          "linkLabel": "Bekijk ↗",
+          "ariaLabel": "Bekijk Regelsein"
+        }
+      ]
+    },
+    "about": {
+      "label": "05 / Over mij",
+      "heading": "Dicht bij de makers.<br>Aan tafel bij de directie.",
+      "portrait": {
+        "src": "/images/about/bastiaan-van-ederen.webp",
+        "alt": "Bastiaan van Ederen",
+        "width": 1134,
+        "height": 1700
+      },
+      "paragraphs": [
+        "Ik begon in de fotografie, werkte in communicatieontwerp en productie en richtte daarna Studio Zelden op. Als ondernemer leerde ik creatieve keuzes ook zakelijk te wegen. Die ervaring neem ik mee in elk project.",
+        "Ik ben benaderbaar, zeg wat ik denk en durf knopen door te hakken. Met directieteams vertaal ik bedrijfsambities naar merk- en marketingstrategie. Daarbij houd ik nauw contact met de mensen die het werk maken."
+      ]
+    },
+    "contact": {
+      "label": "06 / Contact",
+      "heading": "Waar wil je samen<br>aan werken?",
+      "body": "Zoek je iemand voor een vaste functie of heb je een opdracht in gedachten? Ik hoor graag van je.",
+      "cta": "Neem contact op",
+      "href": "mailto:bastiaanvanederen@gmail.com?subject=B.essential%20%7C%20Kennismaking"
+    },
+    "footer": "Creatieve strategie en eigen initiatieven"
+  }
+}

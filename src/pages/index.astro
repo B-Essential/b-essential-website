@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HomePage from "../components/HomePage.astro";
-import { homePage } from "../content/site";
+import { homePages } from "../content/site";
+
+const page = homePages.en;
 ---
 
 <BaseLayout
-  locale={homePage.locale}
-  title={homePage.title}
-  description={homePage.description}
-  canonicalPath={homePage.path}
+  locale={page.locale}
+  title={page.title}
+  description={page.description}
+  canonicalPath={page.path}
+  alternatePath="/nl/"
+  skipLabel={page.labels.skip}
 >
-  <HomePage page={homePage} />
+  <HomePage page={page} />
 </BaseLayout>
