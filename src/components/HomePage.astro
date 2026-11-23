@@ -143,11 +143,23 @@ const caseStudies = getCaseStudies(page.locale);
     </div>
   </section>
 
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
+  <section
+    class="contact"
+    id="contact"
+    aria-labelledby="contact-heading"
+    data-email-help={page.contact.noEmailMessage}
+    data-copy-success={page.contact.copiedMessage}
+    data-copy-manual={page.contact.manualCopyMessage}
+  >
     <span class="section-index">{page.contact.label}</span>
     <h2 id="contact-heading" set:html={page.contact.heading} />
     <p>{page.contact.body}</p>
     <a href={page.contact.href} class="btn btn-dark">{page.contact.cta}</a>
+    <div class="contact-email-row">
+      <a href={page.contact.addressHref} class="contact-address">{page.contact.address}</a>
+      <button type="button" hidden class="copy-address">{page.contact.copyLabel}</button>
+    </div>
+    <p role="status" class="contact-feedback" aria-live="polite" aria-atomic="true" />
   </section>
 </main>
 
@@ -164,5 +176,35 @@ const caseStudies = getCaseStudies(page.locale);
     const updateHref = () => link.setAttribute("href", path + window.location.hash);
     updateHref();
     window.addEventListener("hashchange", updateHref);
+  }
+
+  const contact = document.querySelector<HTMLElement>("#contact");
+  const address = contact?.querySelector<HTMLAnchorElement>(".contact-address");
+  const copyButton = contact?.querySelector<HTMLButtonElement>(".copy-address");
+  const feedback = contact?.querySelector<HTMLElement>(".contact-feedback");
+
+  if (contact && address && copyButton && feedback) {
+    contact.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest('a[href^="mailto:"]')) {
+        feedback.textContent = contact.dataset.emailHelp ?? "";
+      }
+    });
+
+    copyButton.hidden = false;
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(address.textContent?.trim() ?? "");
+        feedback.textContent = contact.dataset.copySuccess ?? "";
+      } catch {
+        const selection = window.getSelection();
+        if (selection) {
+          const range = document.createRange();
+          range.selectNodeContents(address);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+        feedback.textContent = contact.dataset.copyManual ?? "";
+      }
+    });
   }
 </script>

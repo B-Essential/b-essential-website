@@ -168,7 +168,13 @@
       "heading": "Something worth<br>working on?",
       "body": "If you’re hiring for a full-time role or have an independent brief in mind, I’d be glad to hear from you.",
       "cta": "Start a conversation",
-      "href": "mailto:bastiaanvanederen@gmail.com?subject=B.essential%20%E2%80%94%20Introduction"
+      "href": "mailto:info@b-essential.nl?subject=B.essential%20%7C%20Introduction",
+      "address": "info@b-essential.nl",
+      "addressHref": "mailto:info@b-essential.nl",
+      "copyLabel": "Copy address",
+      "noEmailMessage": "No email window? Copy the address and paste it into your email app.",
+      "copiedMessage": "Email address copied.",
+      "manualCopyMessage": "Copy the email address manually."
     },
     "footer": "Creative strategy & independent ventures"
   },
@@ -341,7 +347,13 @@
       "heading": "Waar wil je samen<br>aan werken?",
       "body": "Zoek je iemand voor een vaste functie of heb je een opdracht in gedachten? Ik hoor graag van je.",
       "cta": "Neem contact op",
-      "href": "mailto:bastiaanvanederen@gmail.com?subject=B.essential%20%7C%20Kennismaking"
+      "href": "mailto:info@b-essential.nl?subject=B.essential%20%7C%20Kennismaking",
+      "address": "info@b-essential.nl",
+      "addressHref": "mailto:info@b-essential.nl",
+      "copyLabel": "Kopieer adres",
+      "noEmailMessage": "Opent er geen mailvenster? Kopieer het adres en plak het in je eigen mailprogramma.",
+      "copiedMessage": "E-mailadres gekopieerd.",
+      "manualCopyMessage": "Kopieer het e-mailadres handmatig."
     },
     "footer": "Creatieve strategie en eigen initiatieven"
   }

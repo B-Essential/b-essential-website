@@ -19,6 +19,12 @@ Approved copy, headings, case descriptions and accessibility labels are in
 `src/content/homepages.json`; `src/content/site.ts` exposes the typed locales.
 Both languages share the existing homepage and carousel components.
 
+The V8 contact section is shared by all routes. Its per-language mailto link,
+visible `info@b-essential.nl` address, copy-button label and feedback messages
+are in `src/content/homepages.json`. The copy button uses the Clipboard API;
+if copying is unavailable, it selects the address and explains how to copy it
+manually.
+
 ## Case photographs
 
 Original web assets from the approved V7 ZIP, without re-encoding:
