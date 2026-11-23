@@ -16,7 +16,7 @@ in `src/layouts/BaseLayout.astro`; homepage copy is in `src/content/site.ts`.
 
 ## Case photographs
 
-Original web assets from the approved V5 ZIP, without re-encoding:
+Original web assets from the approved V6 ZIP, without re-encoding:
 
 - Studio Zelden: `public/images/cases/studio-zelden/`
 - VOYAH: `public/images/cases/voyah/`
@@ -24,7 +24,7 @@ Original web assets from the approved V5 ZIP, without re-encoding:
 
 To replace or add photographs, put the files in the corresponding case folder
 and edit that case's array in **`src/content/galleries.json`**. This is the supplied
-manifest, with 20 Studio Zelden photographs and 9 VOYAH photographs. Each entry
+manifest, with 17 Studio Zelden photographs and 8 VOYAH photographs. Each entry
 has `src`, `alt`, `width`, `height` and `fit` (`contain` or `cover`), with an optional
 `objectPosition`. Paths retain the ZIP format, `assets/<case>/<filename>`;
 `src/content/cases.ts` maps them to `/images/cases/<case>/<filename>` on this site.

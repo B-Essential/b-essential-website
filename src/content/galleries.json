@@ -62,7 +62,7 @@
       "alt": "Fever-Tree Mediterranean Tonic pairing wheel and the “Discover the perfect tonic for your gin” campaign.",
       "width": 1600,
       "height": 914,
-      "fit": "contain"
+      "fit": "cover"
     },
     {
       "src": "assets/studio-zelden/10-fever-tree-studio.webp",
@@ -118,28 +118,7 @@
       "alt": "Close-up of an athlete’s white running shoe in motion.",
       "width": 1600,
       "height": 1280,
-      "fit": "contain"
-    },
-    {
-      "src": "assets/studio-zelden/18-adidas-athlete.webp",
-      "alt": "Athlete reaching upwards during a studio shoot for adidas.",
-      "width": 1280,
-      "height": 1600,
-      "fit": "contain"
-    },
-    {
-      "src": "assets/studio-zelden/19-smirnoff-outdoors.webp",
-      "alt": "Two friends holding Smirnoff Ice outdoors.",
-      "width": 1071,
-      "height": 1600,
-      "fit": "contain"
-    },
-    {
-      "src": "assets/studio-zelden/20-adidas-forest-portrait.webp",
-      "alt": "Runner in a yellow top photographed between trees for adidas.",
-      "width": 1000,
-      "height": 1500,
-      "fit": "contain"
+      "fit": "cover"
     }
   ],
   "voyah": [
@@ -198,13 +177,6 @@
       "width": 1600,
       "height": 1066,
       "fit": "cover"
-    },
-    {
-      "src": "assets/voyah/09-coastal-road.webp",
-      "alt": "A VOYAH on a curved coastal road viewed from above.",
-      "width": 1066,
-      "height": 1600,
-      "fit": "contain"
     }
   ]
 }
