@@ -1,0 +1,145 @@
+---
+import type { CaseStudy } from "../content/cases";
+
+type Props = {
+  caseStudy: CaseStudy;
+};
+
+const { caseStudy } = Astro.props;
+const trackId = `${caseStudy.id}-photos`;
+---
+
+<section
+  class:list={["case-gallery", `${caseStudy.id}-gallery`]}
+  aria-label={`${caseStudy.name} project images`}
+  aria-roledescription="carousel"
+  data-carousel
+>
+  <div class="gallery-stage">
+    <div
+      class="carousel-track"
+      id={trackId}
+      tabindex="0"
+      aria-label={`${caseStudy.name} photographs`}
+    >
+      {
+        caseStudy.images.map((image) => (
+          <img {...image} loading="lazy" decoding="async" />
+        ))
+      }
+    </div>
+    <div class="carousel-ui" hidden>
+      <button
+        type="button"
+        class="carousel-arrow previous"
+        aria-label={`Previous ${caseStudy.name} photo`}
+        aria-controls={trackId}
+      />
+      <button
+        type="button"
+        class="carousel-arrow next"
+        aria-label={`Next ${caseStudy.name} photo`}
+        aria-controls={trackId}
+      />
+      <div
+        class="carousel-dots"
+        role="group"
+        aria-label={`Choose a ${caseStudy.name} photo`}
+      />
+    </div>
+  </div>
+  <div class="gallery-bar">
+    <div class="case-logo">
+      <img {...caseStudy.logo} loading="lazy" decoding="async" />
+    </div>
+  </div>
+  <span class="sr-only" aria-live="polite" aria-atomic="true" />
+</section>
+
+<script>
+  for (const gallery of document.querySelectorAll<HTMLElement>("[data-carousel]")) {
+    const track = gallery.querySelector<HTMLElement>(".carousel-track");
+    const controls = gallery.querySelector<HTMLElement>(".carousel-ui");
+    const navigation = gallery.querySelector<HTMLElement>(".carousel-dots");
+    const status = gallery.querySelector<HTMLElement>("[aria-live]");
+    if (!track || !controls || !navigation || !status) continue;
+
+    const photos = Array.from(track.querySelectorAll<HTMLImageElement>("img"));
+    if (photos.length < 2) continue;
+
+    let current = 0;
+    const dots = photos.map((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "carousel-dot";
+      dot.setAttribute("aria-label", `Show photo ${index + 1} of ${photos.length}`);
+      dot.setAttribute("aria-controls", track.id);
+      dot.addEventListener("click", () => show(index));
+      navigation.append(dot);
+      return dot;
+    });
+
+    function select(index: number, announce: boolean) {
+      current = index;
+      dots.forEach((dot, i) => {
+        if (i === index) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+
+      const activeDot = dots[index];
+      if (
+        activeDot.offsetLeft < navigation!.scrollLeft ||
+        activeDot.offsetLeft + activeDot.offsetWidth >
+          navigation!.scrollLeft + navigation!.clientWidth
+      ) {
+        navigation!.scrollLeft =
+          activeDot.offsetLeft - (navigation!.clientWidth - activeDot.offsetWidth) / 2;
+      }
+
+      if (announce) {
+        status!.textContent = `Photo ${index + 1} of ${photos.length}. ${photos[index].alt}`;
+      }
+    }
+
+    function show(index: number) {
+      const next = (index + photos.length) % photos.length;
+      track!.scrollLeft = next * track!.clientWidth;
+      select(next, true);
+    }
+
+    controls.querySelector(".previous")?.addEventListener("click", () => show(current - 1));
+    controls.querySelector(".next")?.addEventListener("click", () => show(current + 1));
+
+    gallery.addEventListener("keydown", (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      let destination: number;
+      switch (event.key) {
+        case "ArrowLeft": destination = current - 1; break;
+        case "ArrowRight": destination = current + 1; break;
+        case "Home": destination = 0; break;
+        case "End": destination = photos.length - 1; break;
+        default: return;
+      }
+      event.preventDefault();
+      show(destination);
+    });
+
+    // Native horizontal scrolling and snapping support touch and trackpad swipes.
+    track.addEventListener("scroll", () => {
+      if (!track.clientWidth) return;
+      const index = Math.max(
+        0,
+        Math.min(photos.length - 1, Math.round(track.scrollLeft / track.clientWidth))
+      );
+      if (current !== index) select(index, true);
+    }, { passive: true });
+
+    // Keep the selected photo aligned when orientation or viewport width changes.
+    new ResizeObserver(() => {
+      track.scrollLeft = current * track.clientWidth;
+    }).observe(track);
+
+    controls.hidden = false;
+    select(0, false);
+  }
+</script>
