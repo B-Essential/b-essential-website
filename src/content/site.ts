@@ -17,7 +17,8 @@ export const homePage = {
   ],
   navNote: "Independent practice · Netherlands",
   hero: {
-    eyebrow: "The independent practice of Bastiaan van Ederen",
+    eyebrow: "The independent practice of",
+    name: "Bastiaan van Ederen",
     role: "Creative Strategy Director",
     description:
       "I connect business ambitions with brand and marketing strategy, bringing together the people, ideas and expertise to make them real.",

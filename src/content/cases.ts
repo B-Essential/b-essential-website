@@ -1,8 +1,15 @@
+import galleries from "./galleries.json";
+
 export type CaseImage = {
   src: string;
   alt: string;
   width: number;
   height: number;
+};
+
+export type GalleryImage = CaseImage & {
+  fit: "cover" | "contain";
+  objectPosition?: string;
 };
 
 export type CaseStudy = {
@@ -12,11 +19,19 @@ export type CaseStudy = {
   title: string;
   body: string;
   logo: CaseImage;
-  images: CaseImage[];
+  images: GalleryImage[];
 };
 
-// Add or replace photos in public/images/cases/<case>/, then update that case's
-// images list below. Its order controls the slides; arrows and dots adapt to it.
+// Keep the supplied manifest as the source of slide order, alt text and crops.
+// Its ZIP-relative assets/<case>/ paths map to public/images/cases/<case>/.
+function prepareImages(images: (CaseImage & { fit: string; objectPosition?: string })[]): GalleryImage[] {
+  return images.map((image) => ({
+    ...image,
+    src: image.src.replace(/^assets\//, "/images/cases/"),
+    fit: image.fit === "contain" ? "contain" : "cover"
+  }));
+}
+
 export const caseStudies: CaseStudy[] = [
   {
     id: "studio",
@@ -31,20 +46,7 @@ export const caseStudies: CaseStudy[] = [
       width: 750,
       height: 160
     },
-    images: [
-      {
-        src: "/images/cases/studio-zelden/production-crew.webp",
-        alt: "Studio Zelden’s production crew setting up lights and a camera for a shoot.",
-        width: 1000,
-        height: 667
-      },
-      {
-        src: "/images/cases/studio-zelden/fever-tree.webp",
-        alt: "Studio Zelden campaign photograph of a Fever-Tree bottle and a glass with grapefruit.",
-        width: 1200,
-        height: 675
-      }
-    ]
+    images: prepareImages(galleries["studio-zelden"])
   },
   {
     id: "voyah",
@@ -59,19 +61,6 @@ export const caseStudies: CaseStudy[] = [
       width: 750,
       height: 214
     },
-    images: [
-      {
-        src: "/images/cases/voyah/blue-vehicle-in-motion.webp",
-        alt: "VOYAH campaign photograph of a blue vehicle in motion between trees.",
-        width: 1500,
-        height: 948
-      },
-      {
-        src: "/images/cases/voyah/blue-vehicle-front.webp",
-        alt: "Front view of a blue VOYAH, with light tracing the grille and bonnet.",
-        width: 1500,
-        height: 844
-      }
-    ]
+    images: prepareImages(galleries.voyah)
   }
 ];

@@ -23,8 +23,17 @@ const trackId = `${caseStudy.id}-photos`;
       aria-label={`${caseStudy.name} photographs`}
     >
       {
-        caseStudy.images.map((image) => (
-          <img {...image} loading="lazy" decoding="async" />
+        caseStudy.images.map((image, index) => (
+          <img
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            data-fit={image.fit}
+            style={image.objectPosition ? `object-position: ${image.objectPosition}` : undefined}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+          />
         ))
       }
     </div>
@@ -134,9 +143,10 @@ const trackId = `${caseStudy.id}-photos`;
       if (current !== index) select(index, true);
     }, { passive: true });
 
-    // Keep the selected photo aligned when orientation or viewport width changes.
+    // Keep the photo aligned and its dot visible after an orientation/width change.
     new ResizeObserver(() => {
       track.scrollLeft = current * track.clientWidth;
+      select(current, false);
     }).observe(track);
 
     controls.hidden = false;

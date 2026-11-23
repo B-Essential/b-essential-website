@@ -23,7 +23,10 @@ const { page } = Astro.props;
   <section class="hero" id="top" aria-labelledby="hero-heading">
     <div class="hero-number" aria-hidden="true">B.</div>
     <div class="hero-top">
-      <span class="eyebrow">{page.hero.eyebrow}</span>
+      <span class="eyebrow practice-credit">
+        <span>{page.hero.eyebrow}</span>
+        <span class="practice-name">{page.hero.name}</span>
+      </span>
       <span class="eyebrow">{page.hero.role}</span>
     </div>
     <div class="hero-grid">
